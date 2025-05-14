@@ -18,9 +18,28 @@ body {
   text-align: left;
 }
 
-h1, h2 {
+.app-title {
+  font-family: 'Chewy', cursive; 
+  font-size: 2.6rem;
   text-align: center;
-  color: #a04ac1;
+  color: var(--heading);
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05); 
+}
+
+
+.theme-title {
+  color: var(--heading);
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+h2 {
+  text-align: center;
+  color: var(--heading);
 }
 
 label {
@@ -65,37 +84,43 @@ ul {
   padding: 0;
   margin-top: 25px;
 }
-
+#stats,
 li {
-  background-color: #fff;
-  padding: 12px;
-  border-radius: 12px;
-  margin-bottom: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background-color: #fff;      
+  color: #333;                      
+  padding: 16px;
+  border-radius: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 2px solid var(--accent); 
 }
-/* === TEMA: Rosa === */
+
+
+
 .theme-pink {
   --bg: #fdf6ff;
   --container: #fff0fa;
   --text: #333;
   --accent: #d492ec;
+  --heading: #a04ac1; 
 }
 
-/* === TEMA: Blå === */
 .theme-blue {
   --bg: #eef8ff;
   --container: #dff2fd;
   --text: #222;
   --accent: #5ca9e6;
+  --heading: #3670b3; 
 }
 
-/* === TEMA: Mörk === */
 .theme-dark {
   --bg: #1a1a1a;
   --container: #2a2a2a;
   --text: #fff;
   --accent: #5e5ce6;
+  --heading: #c2b6ff; 
 }
+
 
 /* Använd variabler */
 body {
@@ -105,6 +130,7 @@ body {
 
 .container {
   background: var(--container);
+  color: var(--text);
 }
 
 button {
@@ -114,7 +140,7 @@ button {
 button:hover {
   filter: brightness(1.1);
 }
-/* === Mobilanpassning (max 600px) */
+/* Mobilanpassning (max 600px) */
 @media (max-width: 600px) {
   body {
     padding: 20px;
